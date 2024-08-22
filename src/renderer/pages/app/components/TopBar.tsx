@@ -14,7 +14,7 @@ const TopBar = () => {
   return (
     <div className="dragable topbar-dragable-area">
       <div className="non-dragable app-name-group">
-        <div className="app-name">Chun City</div>
+        <div className="app-name">Chun City V0.0.2</div>
       </div>
       <div className="non-dragable window-control-group">
         <div className="minimize-window" onClick={handleMinimizeWindow}>
