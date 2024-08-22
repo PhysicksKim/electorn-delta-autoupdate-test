@@ -1,0 +1,208 @@
+@import '@app/styles/Color.scss';
+
+$home-team-color: #565897;
+$away-team-color: #d89066;
+
+.fixture-list-item {
+  width: 100%;
+  height: 57px;
+  background-color: $fixture-bar;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  font-size: 12px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .match-schedule-box {
+    margin-left: 17px;
+    text-wrap: nowrap;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .kickoff-time {
+      margin-top: 5px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+    .match-round {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 400;
+      max-width: 60px;
+      max-height: 30px;
+      text-align: center;
+      overflow: hidden;
+      text-wrap: wrap;
+      margin-bottom: 2px;
+    }
+  }
+
+  .match-versus-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+    .team-logo-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      .team-mark {
+        width: 16px;
+        height: 18px;
+        text-align: center;
+        border-radius: 5px;
+        box-sizing: border-box;
+        margin-top: 3px;
+
+        .team-mark-text {
+          font-size: 14px;
+          font-weight: 400;
+          margin-left: 2px;
+          transform: translateY(-1px);
+          text-align: center;
+        }
+      }
+      .home-team-mark {
+        border: 2px solid $home-team-color;
+        background-color: $home-team-color;
+        padding-right: 1px;
+        margin-right: 10px;
+      }
+      .away-team-mark {
+        border: 2px solid $away-team-color;
+        background-color: $away-team-color;
+        padding-right: 1px;
+        margin-left: 10px;
+      }
+
+      .team-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 35px;
+          height: 35px;
+          object-fit: contain;
+        }
+      }
+    }
+    .team-a-logo-box {
+      margin-left: 20px;
+    }
+    .team-b-logo-box {
+      margin-right: 5px;
+    }
+
+    .team-versus-box {
+      width: 210px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      font-size: 14px;
+      margin-top: 3px;
+      overflow-x: visible;
+      max-width: 210px;
+
+      .team-a-name {
+        width: 85px;
+        text-align: center;
+        overflow-y: hidden;
+        overflow-x: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .match-score {
+        width: 40px;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 3px;
+      }
+
+      .team-b-name {
+        width: 85px;
+        text-align: center;
+        overflow-y: hidden;
+        overflow-x: visible;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .match-status-box {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    text-wrap: nowrap;
+    overflow: visible;
+
+    .match-status-title {
+      margin-top: 2px;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .match-status-now {
+      font-size: 14px;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+  }
+
+  .live-match-btn-box {
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 9px;
+    padding-bottom: 6px;
+    border-radius: 7px;
+  }
+  .live-match-btn-box.enabled {
+    cursor: pointer;
+    color: $bright-blue-white;
+    background-color: $background-black;
+  }
+  .live-match-btn-box.disabled {
+    cursor: not-allowed;
+    color: $grey-disabled;
+    background-color: $theme-dark-blue;
+  }
+  .live-match-btn-box.enabled:hover {
+    transition-duration: 0.2s;
+    color: $background-black;
+    background-color: $soft-blue-white;
+  }
+}

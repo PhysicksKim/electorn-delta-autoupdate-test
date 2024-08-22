@@ -1,0 +1,63 @@
+@import '@app/styles/Color.scss';
+@import '@app/styles/Variables.scss';
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  box-sizing: border-box;
+
+  .top-bar-area {
+    background-color: $theme-dark-blue;
+
+    width: 100%;
+    height: $top-bar-height;
+    min-height: $top-bar-height;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-layout {
+    background-color: $theme-dark-blue;
+    height: calc(100vh - #{$top-bar-height});
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    box-sizing: border-box;
+
+    .side-navigation-area {
+      background-color: $theme-dark-blue;
+
+      width: 140px;
+      // height 밑에 2px 만큼 부족해서 더해줌. 왜인지 모름
+      height: calc(100vh - #{$top-bar-height} + 2px);
+      box-sizing: border-box;
+    }
+
+    .contents-area {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      height: calc(100vh - #{$top-bar-height});
+      background-color: $background-black;
+      border-top-left-radius: 14px;
+
+      box-sizing: border-box;
+      overflow-x: visible;
+    }
+  }
+}

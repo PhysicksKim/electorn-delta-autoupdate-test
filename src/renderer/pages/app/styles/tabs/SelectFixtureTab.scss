@@ -1,0 +1,139 @@
+@import '@app/styles/Color.scss';
+
+.select-fixture-tab-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+
+  .league-box {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 20px;
+
+    // 여기서 좌우 padding 을 잡으면,
+    // embla carousel 로 인하여 width 100% 가 일그러짐
+
+    .league-box-title {
+      font-size: 24px;
+      font-weight: bold;
+
+      margin-top: 5px;
+      margin-left: 10px;
+    }
+
+    .league-card-box {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: start;
+      flex: 1;
+      margin-top: 15px;
+
+      .league-card-item {
+        background-color: $card-background;
+        box-sizing: border-box;
+        padding: 5px;
+        height: 100px;
+        width: 145px;
+        border-radius: 10px;
+        user-select: none;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition-duration: 0.13s;
+
+        &.selected {
+          background-color: $card-background-selected;
+        }
+        &:hover {
+          background-color: $card-background-hover;
+        }
+
+        .league-card-item-logo {
+          width: 100px;
+          height: 45px;
+          object-fit: contain;
+          margin-bottom: 10px;
+          margin-top: 5px;
+        }
+
+        .league-card-item-name {
+          text-wrap: nowrap;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+// embla carousel
+.league-box {
+  position: relative; /* 버튼 위치를 위한 상대 위치 지정 */
+  max-width: 640px;
+}
+
+.embla {
+  overflow: hidden;
+  width: 100%;
+  max-width: 640px;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+.embla__container {
+  display: flex;
+}
+
+.embla__slide {
+  width: 100%;
+}
+
+.league-card-box {
+  display: flex;
+}
+
+.league-card-item {
+  min-width: 145px; /* 카드의 너비 */
+  margin-right: 10px; /* 슬라이드 간 간격 */
+}
+
+.league-card-item.selected {
+  background-color: rgba(156, 25, 25, 0.151);
+}
+
+.embla__button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(178, 184, 190, 0.274);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.embla__button--prev {
+  left: -10px;
+}
+
+.embla__button--next {
+  // right: 40px;
+  right: 0px;
+  margin: 0;
+}
+
+.embla__button:disabled {
+  opacity: 0.12;
+  // visibility: hidden;
+  cursor: not-allowed;
+}

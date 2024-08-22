@@ -1,0 +1,15 @@
+.dragable {
+  -webkit-app-region: drag; /* 드래그 가능한 영역 설정 */
+}
+
+.non-dragable {
+  -webkit-app-region: no-drag; /* 드래그 불가능한 영역 설정 */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  box-sizing: border-box;
+  background-color: transparent;
+}
