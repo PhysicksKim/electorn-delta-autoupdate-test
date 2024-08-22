@@ -1,6 +1,6 @@
 {
-  "name": "chun-city",
-  "description": "Chuncity helps streamers to stream football matche infos",
+  "name": "electron-delta-autoupdate-test",
+  "description": "electron-delta-autoupdate-test",
   "keywords": [
     "electron",
     "boilerplate",
@@ -12,13 +12,13 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/PhysicksKim/chun-city#readme",
+  "homepage": "https://github.com/PhysicksKim/electron-delta-autoupdate-test#readme",
   "bugs": {
-    "url": "https://github.com/PhysicksKim/chun-city/issues"
+    "url": "https://github.com/PhysicksKim/electron-delta-autoupdate-test/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PhysicksKim/chun-city.git"
+    "url": "https://github.com/PhysicksKim/electron-delta-autoupdate-test.git"
   },
   "license": "MIT",
   "author": {
@@ -235,7 +235,7 @@
       "target": [
         "nsis"
       ],
-      "artifactName": "ChunCity_Setup_${version}.exe"
+      "artifactName": "deltaupdate_${version}.exe"
     },
     "nsis": {
       "oneClick": false,
@@ -265,7 +265,7 @@
     "publish": {
       "provider": "github",
       "owner": "PhysicksKim",
-      "repo": "chun-city"
+      "repo": "electron-delta-autoupdate-test"
     }
   },
   "devEngines": {

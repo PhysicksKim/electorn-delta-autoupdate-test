@@ -1,7 +1,7 @@
 {
-  "name": "chun-city",
-  "version": "0.0.2",
-  "description": "Chuncity helps streamers to stream football matche infos",
+  "name": "electron-delta-autoupdate-test",
+  "version": "0.0.1",
+  "description": "electron-delta-autoupdate-test description",
   "license": "MIT",
   "author": {
     "name": "PhysicksKim",
